@@ -1,6 +1,6 @@
 function openGift(boxNumber) {
     // Tạo số tiền ngẫu nhiên từ 100.000 đến 1.000.000
-    const money = Math.floor(Math.random() * 900000) + 100000;
+    const money = Math.floor(Math.random() * 90000) + 10000;
 
     // Hiển thị thông báo bằng alert
     alert(`Bạn đã được anh yêu lì xì số tiền: ${money.toLocaleString()} VND`);
