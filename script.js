@@ -3,7 +3,7 @@ function openGift(boxNumber) {
     const money = Math.floor(Math.random() * 90000) + 10000;
 
     // Hiển thị thông báo bằng alert
-    alert(`Bạn đã được anh yêu lì xì số tiền: ${money.toLocaleString()} VND`);
+    alert(`Bạn đã được Kim Anh lì xì số tiền: ${money.toLocaleString()} VND`);
 
     // Vô hiệu hóa các hộp quà sau khi chọn
     disableAllBoxes();
