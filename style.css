@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4a261;  /* Màu nền cho trang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+}
+
+.container {
+    background-color: #264a56;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.gift-boxes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.gift-box {
+    width: 120px;
+    height: 120px;
+    background-color: #f1c40f;  /* Màu vàng như hộp quà */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border: 4px solid #e67e22;  /* Màu viền nâu sáng cho hộp */
+}
+
+/* Hiệu ứng hover và active */
+.gift-box:hover {
+    transform: scale(1.1);
+}
+
+.gift-box:active {
+    background-color: #e67e22; /* Màu nâu khi nhấn */
+}
+
+/* Thêm nơ vào hộp quà */
+.gift-box::before, .gift-box::after {
+    content: '';
+    position: absolute;
+    background-color: #e74c3c;  /* Màu đỏ cho nơ */
+    border-radius: 5px;
+}
+
+/* Nơ ngang */
+.gift-box::before {
+    width: 100px;
+    height: 20px;
+    top: 50%; 
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* Nơ dọc */
+.gift-box::after {
+    width: 20px;
+    height: 100px;
+    top: 50%; 
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+/* Hiệu ứng khi hộp quà bị vô hiệu hóa */
+.gift-box.disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
